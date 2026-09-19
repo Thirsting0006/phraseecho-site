@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhraseEcho - 离线优先的智能语言原声复习工具</title>
+  <meta name="description" content="PhraseEcho 是一款离线优先的移动端语言学习工具，基于原声捕捉、智能分类和自适应 EchoFlow 间隔复习算法，助你高效内化地道口语。">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--text-main) 60%, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.25rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 2.2rem;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+    .tech-highlight {
+      margin-top: 4rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .highlight-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">PE</div>
+        PhraseEcho
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">首页</a></li>
+          <li><a href="privacy.html">隐私政策</a></li>
+          <li><a href="support.html">技术支持</a></li>
+          <li><a href="licenses.html">开源许可</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge">🎙️ 离线优先 · 科学间隔复习</div>
+      <h1>重塑原声记忆<br>让每句口语真正脱口而出</h1>
+      <p>PhraseEcho 专注于真实原声捕捉与 EchoFlow 自适应间隔训练。无需依赖云端，保障个人隐私，离线也能沉浸复习。</p>
+      <div class="hero-actions">
+        <a href="https://github.com/Thirsting0006/PhraseEcho" class="btn btn-primary" target="_blank" rel="noopener">
+          访问开源仓库
+        </a>
+        <a href="support.html" class="btn btn-secondary">
+          联系与支持
+        </a>
+      </div>
+    </section>
+
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>100% 离线优先</h3>
+        <p>所有词句库、学习进度与音频数据均保留在本地设备。无需网络连接，随时随地开启复习，完全掌控自己的学习数据。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>EchoFlow 智能复习</h3>
+        <p>基于认知科学与自适应记忆曲线，提供四层机会队列与冷却防护机制，精准在遗忘临界点强化记忆，告别无效死记硬背。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎧</div>
+        <h3>语音与原声捕捉</h3>
+        <p>集成高质量 TTS 与设备语音识别，支持快速录音捕捉和原生多语种发音，专注于建立语感与地道发音反应。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>严格多语言隔离</h3>
+        <p>支持 18 种标准语言独立建档管理。单词库、复习日志与统计分析完全按学习语言相互隔离，杜绝混淆。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>开放标准数据备份</h3>
+        <p>提供基于 JSON 与 CSV 的完整导入与导出能力，支持跨平台（Android / iOS）数据平滑迁移，绝无平台锁定。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>现代原生体验</h3>
+        <p>采用 Jetpack Compose (Android) 与 SwiftUI (iOS) 现代原生技术栈构建，极速响应，操作流畅细腻。</p>
+      </div>
+    </section>
+
+    <section class="tech-highlight">
+      <div>
+        <span class="highlight-badge">OPEN & TRANSPARENT</span>
+        <h2>透明、可靠且尊重用户的工具</h2>
+        <p>我们坚信学习软件的核心是辅助专注与长期积累。PhraseEcho 不收集任何个人数据，不夹带无关广告，所有代码遵循开源规范，为您打造纯粹的语言进阶环境。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <ul class="footer-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+        <li><a href="support.html">技术支持</a></li>
+        <li><a href="licenses.html">开源许可</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

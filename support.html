@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技术支持与帮助 (Support) - PhraseEcho</title>
+  <meta name="description" content="PhraseEcho 用户支持中心：常见问题解答 (FAQ)、备份恢复指南、问题反馈与联系方式。">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-page);
+    }
+    .faq-item h3 {
+      margin-top: 0;
+      color: var(--text-main);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .faq-item p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .contact-box {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      background: var(--bg-card);
+    }
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">PE</div>
+        PhraseEcho
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="privacy.html">隐私政策</a></li>
+          <li><a href="support.html" class="active">技术支持</a></li>
+          <li><a href="licenses.html">开源许可</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="content-card">
+      <h1>技术支持与帮助 (Support)</h1>
+      <p class="lead">遇到问题或有任何疑问？查看常见解答，或直接通过 GitHub 与社区反馈。</p>
+
+      <h2>常见问题解答 (FAQ)</h2>
+      
+      <div class="faq-item">
+        <h3>❓ 为什么语音发音无法正常播放？</h3>
+        <p>PhraseEcho 依赖设备本地的文字转语音（TTS）引擎。请在系统设置中确认是否已下载对应学习语言的高质量语音包（例如在 Android 的系统“文字转语音输出”中安装对应语音数据，或在 iOS 的“辅助功能 - 朗读内容”中下载对应语种声音）。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 如何在换机或两台设备间同步数据？</h3>
+        <p>PhraseEcho 不设强制云端账号。您可以在原设备的应用设置中点击“导出完整备份 (JSON)”，将导出的备份文件传输到新设备，在新设备上选择“恢复备份”即可完整恢复所有短语、复习历史及分类偏好。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 复习算法的评分机制是如何运作的？</h3>
+        <p>PhraseEcho 采用升级版 EchoFlow 自适应间隔重复算法，通过“完全听懂 (Good)”、“部分听懂 (Fuzzy)”和“完全没听懂 (Forgot)”三档评分，综合计算连续掌握度、难度因子和冷却时间，自适应调整下一次提醒时机。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 支持导入现有的 Anki 或 CSV 单词本吗？</h3>
+        <p>支持。应用提供遵循标准 UTF-8 编码的 CSV 批量导入功能，您可以导入包含短语、释义和音标的表格文件，快速扩充专属语料库。</p>
+      </div>
+
+      <h2>联系与问题反馈渠道</h2>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>🐛 GitHub Issue 跟踪</h3>
+          <p>若在使用过程中发现 Bug、闪退或体验缺陷，欢迎在 GitHub 提交 Issue，我们将积极排查与修复。</p>
+          <div style="margin-top: 1rem;">
+            <a href="https://github.com/Thirsting0006/PhraseEcho/issues" class="btn btn-secondary" target="_blank" rel="noopener">
+              提交 Issue
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3>💡 功能提议与讨论</h3>
+          <p>对间隔算法、交互细节或多语言支持有新的灵感与建议？欢迎参与开源社区的讨论。</p>
+          <div style="margin-top: 1rem;">
+            <a href="https://github.com/Thirsting0006/PhraseEcho/discussions" class="btn btn-secondary" target="_blank" rel="noopener">
+              参与社区讨论
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <ul class="footer-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+        <li><a href="support.html">技术支持</a></li>
+        <li><a href="licenses.html">开源许可</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
