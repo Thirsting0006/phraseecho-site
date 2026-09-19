@@ -95,18 +95,21 @@
       <div class="email-support-card">
         <div>
           <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.15rem;">📧 Direct Email Support</h3>
-          <p style="margin-bottom:0.75rem; font-size:0.95rem;">Click the button below to compose an email in your default mail app, or copy our protected address:</p>
+          <p style="margin-bottom:1rem; font-size:0.95rem;">You can copy our support address directly, or open it in your email application:</p>
           
-          <div class="email-display-row">
-            <a id="mail-link" class="btn btn-primary" href="#">
-              ✉️ Open Mail App
-            </a>
-            <div class="email-address-badge">
-              <span id="mail-text">Loading support email...</span>
-              <button id="copy-btn" class="btn btn-secondary" style="padding:0.25rem 0.6rem; font-size:0.8rem;" type="button">
-                Copy
-              </button>
+          <div class="email-copy-container">
+            <div class="email-input-box">
+              <span class="email-icon">✉️</span>
+              <span id="mail-text" class="email-text">Loading support email...</span>
             </div>
+            <button id="copy-btn" class="btn-copy" type="button">
+              📋 Copy Email
+            </button>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <a id="mail-link" class="btn-client-link" href="#">
+              Or click here to open in your default mail app &rarr;
+            </a>
           </div>
         </div>
 

@@ -296,34 +296,89 @@ p {
 .email-support-card {
   background: var(--bg-page);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-.email-display-row {
+.email-copy-container {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: stretch;
+  gap: 0.6rem;
+  max-width: 540px;
   flex-wrap: wrap;
 }
 
-.email-address-badge {
-  display: inline-flex;
+.email-input-box {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: 0.6rem 1rem;
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease;
+}
+
+.email-input-box:hover {
+  border-color: var(--primary);
+}
+
+.email-icon {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.email-text {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-main);
   user-select: all;
+  letter-spacing: -0.01em;
+}
+
+.btn-copy {
+  padding: 0.75rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--primary);
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-copy:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-client-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0.3rem 0;
+  transition: color 0.2s ease;
+}
+
+.btn-client-link:hover {
+  color: var(--primary);
 }
 
 .antispam-hint {

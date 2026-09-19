@@ -95,18 +95,21 @@
       <div class="email-support-card">
         <div>
           <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.15rem;">📧 官方支持邮箱</h3>
-          <p style="margin-bottom:0.75rem; font-size:0.95rem;">点击下方按钮可直接唤起您的邮件客户端，或复制经过反爬虫保护的邮箱地址：</p>
+          <p style="margin-bottom:1rem; font-size:0.95rem;">您可以直接复制下方支持邮箱，或在您的本地邮件客户端中打开：</p>
           
-          <div class="email-display-row">
-            <a id="mail-link" class="btn btn-primary" href="#">
-              ✉️ 唤起邮件应用发信
-            </a>
-            <div class="email-address-badge">
-              <span id="mail-text">正在加载支持邮箱...</span>
-              <button id="copy-btn" class="btn btn-secondary" style="padding:0.25rem 0.6rem; font-size:0.8rem;" type="button">
-                复制
-              </button>
+          <div class="email-copy-container">
+            <div class="email-input-box">
+              <span class="email-icon">✉️</span>
+              <span id="mail-text" class="email-text">正在加载支持邮箱...</span>
             </div>
+            <button id="copy-btn" class="btn-copy" type="button">
+              📋 复制邮箱地址
+            </button>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <a id="mail-link" class="btn-client-link" href="#">
+              或点击此处在系统默认邮件应用中打开 &rarr;
+            </a>
           </div>
         </div>
 
