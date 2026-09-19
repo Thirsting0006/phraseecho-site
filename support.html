@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>技术支持与帮助 (Support) - PhraseEcho</title>
-  <meta name="description" content="PhraseEcho 用户支持中心：常见问题解答 (FAQ)、备份恢复指南、问题反馈与联系方式。">
+  <title>Support &amp; Help Center - PhraseEcho</title>
+  <meta name="description" content="PhraseEcho Support Center: Frequently Asked Questions (FAQ), backup recovery, problem troubleshooting, and direct support request form.">
   <link rel="stylesheet" href="styles.css">
   <style>
     .faq-item {
@@ -42,45 +42,6 @@
       margin-top: 0;
       font-size: 1.15rem;
     }
-    .support-form {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .form-field {
-      display: grid;
-      gap: 0.4rem;
-    }
-    .form-field label {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      width: 100%;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 0.75rem 0.85rem;
-      background: var(--bg-page);
-      color: var(--text-main);
-      font: inherit;
-    }
-    .form-field textarea {
-      min-height: 9rem;
-      resize: vertical;
-    }
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      outline: 2px solid var(--primary);
-      outline-offset: 1px;
-    }
-    .form-note {
-      margin-top: 0.75rem;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
   </style>
 </head>
 <body>
@@ -90,59 +51,66 @@
         <div class="logo-icon">PE</div>
         PhraseEcho
       </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">首页</a></li>
-          <li><a href="privacy.html">隐私政策</a></li>
-          <li><a href="support.html" class="active">技术支持</a></li>
-          <li><a href="licenses.html">第三方许可</a></li>
-        </ul>
-      </nav>
+      <div class="nav-right">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="support.html" class="active">Support</a></li>
+            <li><a href="licenses.html">Licenses</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switch">
+          <a href="support.html" class="active">English</a>
+          <span class="lang-divider">/</span>
+          <a href="zh/support.html">中文</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <div class="content-card">
-      <h1>技术支持与帮助 (Support)</h1>
-      <p class="lead">遇到问题或有任何疑问？先查看常见解答；如果仍未解决，请通过支持邮箱联系。</p>
+      <h1>Support &amp; Help Center</h1>
+      <p class="lead">Have questions or experiencing an issue? Explore our FAQ below or submit a direct support inquiry.</p>
 
-      <h2>常见问题解答 (FAQ)</h2>
+      <h2>Frequently Asked Questions (FAQ)</h2>
       
       <div class="faq-item">
-        <h3>❓ 为什么语音发音无法正常播放？</h3>
-        <p>iOS 版本对大多数支持语言优先使用 PhraseEcho 的 Supertonic 离线语音，首次使用时可能需要下载语音资源；资源不可用时会回退到 Apple 系统语音。中文使用 Apple 系统语音。Android 版本使用应用支持的系统语音路径。</p>
+        <h3>❓ Why is speech audio not playing properly?</h3>
+        <p>On iOS, PhraseEcho prioritizes the offline Supertonic voice engine for most supported foreign languages; voice models download when first needed. If offline assets are missing or unavailable, playback falls back to Apple system speech. Chinese utilizes Apple system voices directly. On Android, the app relies on the device's configured system text-to-speech engine.</p>
       </div>
 
       <div class="faq-item">
-        <h3>❓ 如何换机或在两台设备间迁移数据？</h3>
-        <p>PhraseEcho 不要求创建账户。您可以在原设备的应用设置中导出完整 JSON 备份，将文件传输到新设备，再选择“恢复备份”。iOS 版本还可以使用自己的 iCloud Drive 保存和恢复自动备份。</p>
+        <h3>❓ How do I migrate my data to a new device?</h3>
+        <p>PhraseEcho requires no mandatory online account. You can navigate to Settings &gt; Export Backup (JSON) on your existing device, transfer the exported file to your new device, and tap "Restore Backup". On iOS, you can also utilize your personal iCloud Drive to automatically back up and restore your study library.</p>
       </div>
 
       <div class="faq-item">
-        <h3>❓ 复习算法的评分机制是如何运作的？</h3>
-        <p>PhraseEcho 采用升级版 EchoFlow 自适应间隔重复算法，通过“完全听懂 (Good)”、“部分听懂 (Fuzzy)”和“完全没听懂 (Forgot)”三档评分，综合计算连续掌握度、难度因子和冷却时间，自适应调整下一次提醒时机。</p>
+        <h3>❓ How does the EchoFlow spaced repetition scoring work?</h3>
+        <p>PhraseEcho implements the EchoFlow adaptive spaced repetition algorithm using three evaluation tiers: Good (understood clearly), Fuzzy (partially understood), and Forgot (did not understand). It dynamically recalculates consecutive streak depth, difficulty factors, and cooldown intervals to present phrases at the optimal memory boundary.</p>
       </div>
 
       <div class="faq-item">
-        <h3>❓ CSV 文件有什么格式要求？</h3>
-        <p>应用支持 PhraseEcho 格式的 UTF-8 CSV 导入，以及完整 JSON 备份恢复。普通 Anki 导出文件或其他 CSV 文件不一定兼容。</p>
+        <h3>❓ What are the format requirements for CSV files?</h3>
+        <p>The app supports standard UTF-8 CSV files matching PhraseEcho’s expected column schema (text, translation, phonetic, etc.), as well as complete JSON database backups. Raw CSV exports from generic third-party flashcard apps may require column adjustments prior to import.</p>
       </div>
 
       <div class="faq-item">
-        <h3>❓ 使用 OpenRouter AI 时，文字会发送到哪里？</h3>
-        <p>AI 分析是可选功能。用户点击 AI 分析后，当前短句和相关语言设置会发送到 OpenRouter 及其模型服务提供商。请不要提交密码、私人对话或其他敏感内容；核心学习功能不需要 OpenRouter API Key。</p>
+        <h3>❓ Where is text sent when using optional OpenRouter AI features?</h3>
+        <p>AI sentence breakdown is optional. When you choose to run AI analysis, only the current phrase and target language parameters are transmitted directly to OpenRouter and its chosen model provider. Never submit passwords, private conversations, or confidential information. An OpenRouter API Key is never required for core offline learning.</p>
       </div>
 
       <div class="faq-item">
-        <h3>❓ 语音识别需要联网吗？</h3>
-        <p>在支持设备端识别且相关资源可用时，可以在设备上处理。设备端识别不可用时，系统可能使用 Apple 的语音识别服务。首次准备语音资源也可能需要网络。</p>
+        <h3>❓ Does speech recognition require internet connectivity?</h3>
+        <p>When on-device speech transcription is supported by your device and required system assets are available, audio is processed completely offline. If on-device recognition is unavailable, iOS may utilize Apple’s server-based speech recognition service. Downloading language assets for the first time may also require an internet connection.</p>
       </div>
 
-      <h2 id="contact">联系与问题反馈</h2>
+      <h2 id="contact">Contact Support</h2>
       <div class="contact-grid">
         <div class="contact-box">
-          <h3>📝 提交支持请求</h3>
-          <p>请填写下面的表单，我们会通过您填写的邮箱回复。请不要提交密码、API Key、备份文件或其他敏感内容。</p>
+          <h3>📝 Submit a Support Request</h3>
+          <p>Please complete the form below. We will reply to the email address you provide. Please do not include passwords, API keys, database files, or sensitive information.</p>
           <form class="support-form" action="https://formsubmit.co/phraseecho@duck.com" method="POST">
             <input type="hidden" name="_subject" value="PhraseEcho support request">
             <input type="hidden" name="_next" value="https://thirsting0006.github.io/phraseecho-site/thanks.html">
@@ -150,36 +118,36 @@
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
             <div class="form-field">
-              <label for="support-name">姓名或称呼（可选）</label>
+              <label for="support-name">Your Name (Optional)</label>
               <input id="support-name" type="text" name="name" autocomplete="name">
             </div>
 
             <div class="form-field">
-              <label for="support-email">回复邮箱</label>
+              <label for="support-email">Reply Email</label>
               <input id="support-email" type="email" name="email" autocomplete="email" required>
             </div>
 
             <div class="form-field">
-              <label for="support-topic">问题类型</label>
+              <label for="support-topic">Topic</label>
               <select id="support-topic" name="topic">
-                <option value="Bug or crash">Bug 或闪退</option>
-                <option value="Data import or backup">数据导入或备份</option>
-                <option value="Speech recognition or playback">语音识别或播放</option>
-                <option value="Privacy question">隐私问题</option>
-                <option value="Other">其他</option>
+                <option value="Bug or crash">Bug or crash report</option>
+                <option value="Data import or backup">Data backup or import</option>
+                <option value="Speech recognition or playback">Audio playback or speech recognition</option>
+                <option value="Privacy question">Privacy question</option>
+                <option value="Other">Other inquiries</option>
               </select>
             </div>
 
             <div class="form-field">
-              <label for="support-message">问题描述</label>
-              <textarea id="support-message" name="message" required placeholder="请描述发生了什么、如何复现，以及设备和系统版本（如适用）。"></textarea>
+              <label for="support-message">Description</label>
+              <textarea id="support-message" name="message" required placeholder="Please describe what happened, steps to reproduce, and your device / OS version (if relevant)."></textarea>
             </div>
 
             <div>
-              <button type="submit" class="btn btn-secondary">提交支持请求</button>
+              <button type="submit" class="btn btn-secondary">Send Support Request</button>
             </div>
           </form>
-          <p class="form-note">表单由 FormSubmit 转发至支持邮箱。首次启用可能需要先在支持邮箱中确认表单地址。</p>
+          <p class="form-note">Inquiries are securely forwarded to our support mailbox via FormSubmit. First-time delivery may require administrative email confirmation.</p>
         </div>
       </div>
     </div>
@@ -188,10 +156,10 @@
   <footer class="footer">
     <div class="footer-container">
       <ul class="footer-nav">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="privacy.html">隐私政策</a></li>
-        <li><a href="support.html">技术支持</a></li>
-        <li><a href="licenses.html">第三方许可</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="licenses.html">Licenses</a></li>
       </ul>
       <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
     </div>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技术支持与帮助 (Support) - PhraseEcho</title>
+  <meta name="description" content="PhraseEcho 用户支持中心：常见问题解答 (FAQ)、备份恢复指南、问题反馈与联系方式。">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-page);
+    }
+    .faq-item h3 {
+      margin-top: 0;
+      color: var(--text-main);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .faq-item p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .contact-box {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      background: var(--bg-card);
+    }
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">PE</div>
+        PhraseEcho
+      </a>
+      <div class="nav-right">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="privacy.html">隐私政策</a></li>
+            <li><a href="support.html" class="active">技术支持</a></li>
+            <li><a href="licenses.html">第三方许可</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switch">
+          <a href="../support.html">English</a>
+          <span class="lang-divider">/</span>
+          <a href="support.html" class="active">中文</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="content-card">
+      <h1>技术支持与帮助 (Support)</h1>
+      <p class="lead">遇到问题或有任何疑问？先查看常见解答；如果仍未解决，请通过支持表单联系。</p>
+
+      <h2>常见问题解答 (FAQ)</h2>
+      
+      <div class="faq-item">
+        <h3>❓ 为什么语音发音无法正常播放？</h3>
+        <p>iOS 版本对大多数支持语言优先使用 PhraseEcho 的 Supertonic 离线语音，首次使用时可能需要下载语音资源；资源不可用时会回退到 Apple 系统语音。中文使用 Apple 系统语音。Android 版本使用应用支持的系统语音路径。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 如何换机或在两台设备间迁移数据？</h3>
+        <p>PhraseEcho 不要求创建账户。您可以在原设备的应用设置中导出完整 JSON 备份，将文件传输到新设备，再选择“恢复备份”。iOS 版本还可以使用自己的 iCloud Drive 保存和恢复自动备份。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 复习算法的评分机制是如何运作的？</h3>
+        <p>PhraseEcho 采用升级版 EchoFlow 自适应间隔重复算法，通过“完全听懂 (Good)”、“部分听懂 (Fuzzy)”和“完全没听懂 (Forgot)”三档评分，综合计算连续掌握度、难度因子和冷却时间，自适应调整下一次提醒时机。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ CSV 文件有什么格式要求？</h3>
+        <p>应用支持 PhraseEcho 格式的 UTF-8 CSV 导入，以及完整 JSON 备份恢复。普通 Anki 导出文件或其他 CSV 文件不一定兼容。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 使用 OpenRouter AI 时，文字会发送到哪里？</h3>
+        <p>AI 分析是可选功能。用户点击 AI 分析后，当前短句和相关语言设置会发送到 OpenRouter 及其模型服务提供商。请不要提交密码、私人对话或其他敏感内容；核心学习功能不需要 OpenRouter API Key。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 语音识别需要联网吗？</h3>
+        <p>在支持设备端识别且相关资源可用时，可以在设备上处理。设备端识别不可用时，系统可能使用 Apple 的语音识别服务。首次准备语音资源也可能需要网络。</p>
+      </div>
+
+      <h2 id="contact">联系与问题反馈</h2>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>📝 提交支持请求</h3>
+          <p>请填写下面的表单，我们会通过您填写的邮箱回复。请不要提交密码、API Key、备份文件或其他敏感内容。</p>
+          <form class="support-form" action="https://formsubmit.co/phraseecho@duck.com" method="POST">
+            <input type="hidden" name="_subject" value="PhraseEcho support request (zh)">
+            <input type="hidden" name="_next" value="https://thirsting0006.github.io/phraseecho-site/zh/thanks.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+
+            <div class="form-field">
+              <label for="support-name">姓名或称呼（可选）</label>
+              <input id="support-name" type="text" name="name" autocomplete="name">
+            </div>
+
+            <div class="form-field">
+              <label for="support-email">回复邮箱</label>
+              <input id="support-email" type="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="support-topic">问题类型</label>
+              <select id="support-topic" name="topic">
+                <option value="Bug or crash">Bug 或闪退</option>
+                <option value="Data import or backup">数据导入或备份</option>
+                <option value="Speech recognition or playback">语音识别或播放</option>
+                <option value="Privacy question">隐私问题</option>
+                <option value="Other">其他</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="support-message">问题描述</label>
+              <textarea id="support-message" name="message" required placeholder="请描述发生了什么、如何复现，以及设备和系统版本（如适用）。"></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-secondary">提交支持请求</button>
+            </div>
+          </form>
+          <p class="form-note">表单由 FormSubmit 转发至支持邮箱。首次启用可能需要先在支持邮箱中确认表单地址。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <ul class="footer-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+        <li><a href="support.html">技术支持</a></li>
+        <li><a href="licenses.html">第三方许可</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
