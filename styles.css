@@ -381,12 +381,6 @@ p {
   color: var(--primary);
 }
 
-.antispam-hint {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
 .email-template-box {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -435,4 +429,3 @@ p {
     font-size: 2rem;
   }
 }
-
