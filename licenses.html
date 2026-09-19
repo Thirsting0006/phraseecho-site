@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>开源许可 (Open Source Licenses) - PhraseEcho</title>
-  <meta name="description" content="PhraseEcho 使用的开源软件许可声明及第三方组件清单。">
+  <title>第三方许可 (Third-Party Licenses) - PhraseEcho</title>
+  <meta name="description" content="PhraseEcho 使用的第三方开源组件和模型许可声明。">
   <link rel="stylesheet" href="styles.css">
   <style>
     .license-card {
@@ -53,7 +53,7 @@
           <li><a href="index.html">首页</a></li>
           <li><a href="privacy.html">隐私政策</a></li>
           <li><a href="support.html">技术支持</a></li>
-          <li><a href="licenses.html" class="active">开源许可</a></li>
+          <li><a href="licenses.html" class="active">第三方许可</a></li>
         </ul>
       </nav>
     </div>
@@ -61,40 +61,38 @@
 
   <main class="container">
     <div class="content-card">
-      <h1>开源许可 (Open Source Licenses)</h1>
+      <h1>第三方许可 (Third-Party Licenses)</h1>
       <p class="lead">
-        PhraseEcho 遵循开源精神，感谢以下优秀开源项目为我们构建优质语言学习体验提供的强大支持。
+        感谢以下开源项目和模型为 PhraseEcho 提供支持。本页面列出当前已确认的第三方组件；具体版本变化时会同步更新。
       </p>
 
-      <h2>PhraseEcho 项目许可证</h2>
+      <h2>PhraseEcho 项目本身</h2>
       <div class="license-card">
         <h3>PhraseEcho</h3>
-        <div class="license-meta">MIT License</div>
-        <div class="license-text">Copyright (c) 2026 PhraseEcho Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</div>
+        <div class="license-meta">未在此页面声明 PhraseEcho 本身的开源许可证</div>
+        <p>PhraseEcho 项目本身的源代码许可证不在此页面声明。下面列出的许可证仅适用于应用实际使用或分发的第三方组件和模型。</p>
       </div>
 
-      <h2>主要第三方开源组件</h2>
+      <h2>iOS 第三方组件与模型</h2>
 
       <div class="license-card">
-        <h3>Android Jetpack & Jetpack Compose</h3>
+        <h3>FluidAudio</h3>
+        <div class="license-meta">Apache License 2.0</div>
+        <p>iOS Swift Package，用于本地音频和语音相关能力。FluidAudio 及其随附组件可能有单独的第三方声明。</p>
+        <p><a href="https://github.com/FluidInference/FluidAudio/blob/main/LICENSE" target="_blank" rel="noopener">查看许可证原文</a> · <a href="https://github.com/FluidInference/FluidAudio/tree/main/ThirdPartyLicenses" target="_blank" rel="noopener">查看第三方声明</a></p>
+      </div>
+
+      <div class="license-card">
+        <h3>Supertonic 3 Model</h3>
+        <div class="license-meta">OpenRAIL-M License</div>
+        <p>PhraseEcho 在支持的 iOS 设备上使用 Supertonic 3 进行本地语音合成。模型许可证与示例代码许可证不同；本页面按模型本身的 OpenRAIL-M 许可证说明。</p>
+        <p><a href="https://huggingface.co/Supertone/supertonic-3" target="_blank" rel="noopener">查看模型卡和许可证</a></p>
+      </div>
+
+      <h2>Android 第三方组件</h2>
+
+      <div class="license-card">
+        <h3>Android Jetpack &amp; Jetpack Compose</h3>
         <div class="license-meta">Apache License 2.0</div>
         <p>提供现代 Android UI 渲染框架、Room 本地持久化数据库、Paging 分页与 Lifecycle 架构组件支持。</p>
         <div class="license-text">Licensed under the Apache License, Version 2.0 (the "License");
@@ -111,7 +109,7 @@ limitations under the License.</div>
       </div>
 
       <div class="license-card">
-        <h3>Kotlin & Kotlin Coroutines</h3>
+        <h3>Kotlin &amp; Kotlin Coroutines</h3>
         <div class="license-meta">Apache License 2.0</div>
         <p>提供类型安全与高效并发响应流（Flow / Coroutines）支持。</p>
         <div class="license-text">Copyright 2010-2026 JetBrains s.r.o. and Kotlin Programming Language contributors.
@@ -127,7 +125,7 @@ Licensed under the Apache License, Version 2.0.</div>
       </div>
 
       <div class="license-card">
-        <h3>Square OkHttp & Retrofit</h3>
+        <h3>Square OkHttp &amp; Retrofit</h3>
         <div class="license-meta">Apache License 2.0</div>
         <p>提供高效轻量的网络传输与 API 调用客户端。</p>
         <div class="license-text">Copyright 2013-2026 Square, Inc.
@@ -150,7 +148,7 @@ Licensed under the Apache License, Version 2.0.</div>
         <li><a href="index.html">首页</a></li>
         <li><a href="privacy.html">隐私政策</a></li>
         <li><a href="support.html">技术支持</a></li>
-        <li><a href="licenses.html">开源许可</a></li>
+        <li><a href="licenses.html">第三方许可</a></li>
       </ul>
       <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
     </div>

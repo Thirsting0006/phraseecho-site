@@ -42,6 +42,45 @@
       margin-top: 0;
       font-size: 1.15rem;
     }
+    .support-form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .form-field {
+      display: grid;
+      gap: 0.4rem;
+    }
+    .form-field label {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 0.85rem;
+      background: var(--bg-page);
+      color: var(--text-main);
+      font: inherit;
+    }
+    .form-field textarea {
+      min-height: 9rem;
+      resize: vertical;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 1px;
+    }
+    .form-note {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
   </style>
 </head>
 <body>
@@ -56,7 +95,7 @@
           <li><a href="index.html">首页</a></li>
           <li><a href="privacy.html">隐私政策</a></li>
           <li><a href="support.html" class="active">技术支持</a></li>
-          <li><a href="licenses.html">开源许可</a></li>
+          <li><a href="licenses.html">第三方许可</a></li>
         </ul>
       </nav>
     </div>
@@ -65,18 +104,18 @@
   <main class="container">
     <div class="content-card">
       <h1>技术支持与帮助 (Support)</h1>
-      <p class="lead">遇到问题或有任何疑问？查看常见解答，或直接通过 GitHub 与社区反馈。</p>
+      <p class="lead">遇到问题或有任何疑问？先查看常见解答；如果仍未解决，请通过支持邮箱联系。</p>
 
       <h2>常见问题解答 (FAQ)</h2>
       
       <div class="faq-item">
         <h3>❓ 为什么语音发音无法正常播放？</h3>
-        <p>PhraseEcho 依赖设备本地的文字转语音（TTS）引擎。请在系统设置中确认是否已下载对应学习语言的高质量语音包（例如在 Android 的系统“文字转语音输出”中安装对应语音数据，或在 iOS 的“辅助功能 - 朗读内容”中下载对应语种声音）。</p>
+        <p>iOS 版本对大多数支持语言优先使用 PhraseEcho 的 Supertonic 离线语音，首次使用时可能需要下载语音资源；资源不可用时会回退到 Apple 系统语音。中文使用 Apple 系统语音。Android 版本使用应用支持的系统语音路径。</p>
       </div>
 
       <div class="faq-item">
-        <h3>❓ 如何在换机或两台设备间同步数据？</h3>
-        <p>PhraseEcho 不设强制云端账号。您可以在原设备的应用设置中点击“导出完整备份 (JSON)”，将导出的备份文件传输到新设备，在新设备上选择“恢复备份”即可完整恢复所有短语、复习历史及分类偏好。</p>
+        <h3>❓ 如何换机或在两台设备间迁移数据？</h3>
+        <p>PhraseEcho 不要求创建账户。您可以在原设备的应用设置中导出完整 JSON 备份，将文件传输到新设备，再选择“恢复备份”。iOS 版本还可以使用自己的 iCloud Drive 保存和恢复自动备份。</p>
       </div>
 
       <div class="faq-item">
@@ -85,30 +124,62 @@
       </div>
 
       <div class="faq-item">
-        <h3>❓ 支持导入现有的 Anki 或 CSV 单词本吗？</h3>
-        <p>支持。应用提供遵循标准 UTF-8 编码的 CSV 批量导入功能，您可以导入包含短语、释义和音标的表格文件，快速扩充专属语料库。</p>
+        <h3>❓ CSV 文件有什么格式要求？</h3>
+        <p>应用支持 PhraseEcho 格式的 UTF-8 CSV 导入，以及完整 JSON 备份恢复。普通 Anki 导出文件或其他 CSV 文件不一定兼容。</p>
       </div>
 
-      <h2>联系与问题反馈渠道</h2>
+      <div class="faq-item">
+        <h3>❓ 使用 OpenRouter AI 时，文字会发送到哪里？</h3>
+        <p>AI 分析是可选功能。用户点击 AI 分析后，当前短句和相关语言设置会发送到 OpenRouter 及其模型服务提供商。请不要提交密码、私人对话或其他敏感内容；核心学习功能不需要 OpenRouter API Key。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>❓ 语音识别需要联网吗？</h3>
+        <p>在支持设备端识别且相关资源可用时，可以在设备上处理。设备端识别不可用时，系统可能使用 Apple 的语音识别服务。首次准备语音资源也可能需要网络。</p>
+      </div>
+
+      <h2 id="contact">联系与问题反馈</h2>
       <div class="contact-grid">
         <div class="contact-box">
-          <h3>🐛 GitHub Issue 跟踪</h3>
-          <p>若在使用过程中发现 Bug、闪退或体验缺陷，欢迎在 GitHub 提交 Issue，我们将积极排查与修复。</p>
-          <div style="margin-top: 1rem;">
-            <a href="https://github.com/Thirsting0006/PhraseEcho/issues" class="btn btn-secondary" target="_blank" rel="noopener">
-              提交 Issue
-            </a>
-          </div>
-        </div>
+          <h3>📝 提交支持请求</h3>
+          <p>请填写下面的表单，我们会通过您填写的邮箱回复。请不要提交密码、API Key、备份文件或其他敏感内容。</p>
+          <form class="support-form" action="https://formsubmit.co/phraseecho@duck.com" method="POST">
+            <input type="hidden" name="_subject" value="PhraseEcho support request">
+            <input type="hidden" name="_next" value="https://thirsting0006.github.io/phraseecho-site/thanks.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
-        <div class="contact-box">
-          <h3>💡 功能提议与讨论</h3>
-          <p>对间隔算法、交互细节或多语言支持有新的灵感与建议？欢迎参与开源社区的讨论。</p>
-          <div style="margin-top: 1rem;">
-            <a href="https://github.com/Thirsting0006/PhraseEcho/discussions" class="btn btn-secondary" target="_blank" rel="noopener">
-              参与社区讨论
-            </a>
-          </div>
+            <div class="form-field">
+              <label for="support-name">姓名或称呼（可选）</label>
+              <input id="support-name" type="text" name="name" autocomplete="name">
+            </div>
+
+            <div class="form-field">
+              <label for="support-email">回复邮箱</label>
+              <input id="support-email" type="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="support-topic">问题类型</label>
+              <select id="support-topic" name="topic">
+                <option value="Bug or crash">Bug 或闪退</option>
+                <option value="Data import or backup">数据导入或备份</option>
+                <option value="Speech recognition or playback">语音识别或播放</option>
+                <option value="Privacy question">隐私问题</option>
+                <option value="Other">其他</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="support-message">问题描述</label>
+              <textarea id="support-message" name="message" required placeholder="请描述发生了什么、如何复现，以及设备和系统版本（如适用）。"></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-secondary">提交支持请求</button>
+            </div>
+          </form>
+          <p class="form-note">表单由 FormSubmit 转发至支持邮箱。首次启用可能需要先在支持邮箱中确认表单地址。</p>
         </div>
       </div>
     </div>
@@ -120,7 +191,7 @@
         <li><a href="index.html">首页</a></li>
         <li><a href="privacy.html">隐私政策</a></li>
         <li><a href="support.html">技术支持</a></li>
-        <li><a href="licenses.html">开源许可</a></li>
+        <li><a href="licenses.html">第三方许可</a></li>
       </ul>
       <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
     </div>
