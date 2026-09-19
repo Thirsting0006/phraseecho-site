@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support &amp; Help Center - PhraseEcho</title>
-  <meta name="description" content="PhraseEcho Support Center: Frequently Asked Questions (FAQ), backup recovery, problem troubleshooting, and direct support request form.">
+  <meta name="description" content="PhraseEcho Support Center: Frequently Asked Questions (FAQ), troubleshooting, and direct email support.">
   <link rel="stylesheet" href="styles.css">
   <style>
     .faq-item {
@@ -25,22 +25,6 @@
     .faq-item p {
       margin-bottom: 0;
       font-size: 0.95rem;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .contact-box {
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      background: var(--bg-card);
-    }
-    .contact-box h3 {
-      margin-top: 0;
-      font-size: 1.15rem;
     }
   </style>
 </head>
@@ -71,7 +55,7 @@
   <main class="container">
     <div class="content-card">
       <h1>Support &amp; Help Center</h1>
-      <p class="lead">Have questions or experiencing an issue? Explore our FAQ below or submit a direct support inquiry.</p>
+      <p class="lead">Have questions or experiencing an issue? Explore our FAQ below or contact our dedicated support inbox directly.</p>
 
       <h2>Frequently Asked Questions (FAQ)</h2>
       
@@ -106,48 +90,39 @@
       </div>
 
       <h2 id="contact">Contact Support</h2>
-      <div class="contact-grid">
-        <div class="contact-box">
-          <h3>📝 Submit a Support Request</h3>
-          <p>Please complete the form below. We will reply to the email address you provide. Please do not include passwords, API keys, database files, or sensitive information.</p>
-          <form class="support-form" action="https://formsubmit.co/phraseecho@duck.com" method="POST">
-            <input type="hidden" name="_subject" value="PhraseEcho support request">
-            <input type="hidden" name="_next" value="https://thirsting0006.github.io/phraseecho-site/thanks.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <p>We provide direct email support for bug reports, troubleshooting, data recovery advice, and general feedback.</p>
 
-            <div class="form-field">
-              <label for="support-name">Your Name (Optional)</label>
-              <input id="support-name" type="text" name="name" autocomplete="name">
+      <div class="email-support-card">
+        <div>
+          <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.15rem;">📧 Direct Email Support</h3>
+          <p style="margin-bottom:0.75rem; font-size:0.95rem;">Click the button below to compose an email in your default mail app, or copy our protected address:</p>
+          
+          <div class="email-display-row">
+            <a id="mail-link" class="btn btn-primary" href="#">
+              ✉️ Open Mail App
+            </a>
+            <div class="email-address-badge">
+              <span id="mail-text">Loading support email...</span>
+              <button id="copy-btn" class="btn btn-secondary" style="padding:0.25rem 0.6rem; font-size:0.8rem;" type="button">
+                Copy
+              </button>
             </div>
-
-            <div class="form-field">
-              <label for="support-email">Reply Email</label>
-              <input id="support-email" type="email" name="email" autocomplete="email" required>
-            </div>
-
-            <div class="form-field">
-              <label for="support-topic">Topic</label>
-              <select id="support-topic" name="topic">
-                <option value="Bug or crash">Bug or crash report</option>
-                <option value="Data import or backup">Data backup or import</option>
-                <option value="Speech recognition or playback">Audio playback or speech recognition</option>
-                <option value="Privacy question">Privacy question</option>
-                <option value="Other">Other inquiries</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="support-message">Description</label>
-              <textarea id="support-message" name="message" required placeholder="Please describe what happened, steps to reproduce, and your device / OS version (if relevant)."></textarea>
-            </div>
-
-            <div>
-              <button type="submit" class="btn btn-secondary">Send Support Request</button>
-            </div>
-          </form>
-          <p class="form-note">Inquiries are securely forwarded to our support mailbox via FormSubmit. First-time delivery may require administrative email confirmation.</p>
+          </div>
         </div>
+
+        <div class="email-template-box">
+          <h4>💡 Recommended details to include in your message:</h4>
+          <ul>
+            <li><strong>Subject:</strong> [Issue Type] Brief description (e.g., <em>[Bug] Audio not playing on iOS 18</em>)</li>
+            <li><strong>Device Info:</strong> Device model and OS version (e.g., <em>iPhone 15 Pro, iOS 18.1</em>)</li>
+            <li><strong>Steps to Reproduce:</strong> What you were doing and what happened</li>
+            <li><strong>Notice:</strong> Please do not attach passwords, API keys, or confidential files.</li>
+          </ul>
+        </div>
+
+        <p class="antispam-hint">
+          🔒 <strong>Spam Protection:</strong> Our support address is obfuscated in page source to deter automated web crawlers and scrapers. Incoming correspondence is strictly filtered by DuckDuckGo Privacy Protection.
+        </p>
       </div>
     </div>
   </main>
@@ -162,5 +137,37 @@
       <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Anti-scraping email assembly
+    (function() {
+      var user = 'phraseecho';
+      var domain = 'duck.com';
+      var addr = user + '@' + domain;
+      var subject = encodeURIComponent('[PhraseEcho Support Request]');
+      var body = encodeURIComponent('Hi PhraseEcho Support Team,\n\n[Please describe your inquiry or issue here]\n\n---\nDevice Model:\nOS Version:\nApp Version:');
+      
+      var mailLink = document.getElementById('mail-link');
+      var mailText = document.getElementById('mail-text');
+      var copyBtn = document.getElementById('copy-btn');
+      
+      if (mailLink && mailText) {
+        mailText.textContent = addr;
+        mailLink.href = 'mailto:' + addr + '?subject=' + subject + '&body=' + body;
+      }
+      
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+          navigator.clipboard.writeText(addr).then(function() {
+            var orig = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+          }).catch(function() {
+            prompt('Copy support email:', addr);
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

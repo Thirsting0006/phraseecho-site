@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>技术支持与帮助 (Support) - PhraseEcho</title>
-  <meta name="description" content="PhraseEcho 用户支持中心：常见问题解答 (FAQ)、备份恢复指南、问题反馈与联系方式。">
+  <meta name="description" content="PhraseEcho 用户支持中心：常见问题解答 (FAQ)、备份恢复指南、问题排查与官方支持邮箱。">
   <link rel="stylesheet" href="../styles.css">
   <style>
     .faq-item {
@@ -25,22 +25,6 @@
     .faq-item p {
       margin-bottom: 0;
       font-size: 0.95rem;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .contact-box {
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      background: var(--bg-card);
-    }
-    .contact-box h3 {
-      margin-top: 0;
-      font-size: 1.15rem;
     }
   </style>
 </head>
@@ -71,7 +55,7 @@
   <main class="container">
     <div class="content-card">
       <h1>技术支持与帮助 (Support)</h1>
-      <p class="lead">遇到问题或有任何疑问？先查看常见解答；如果仍未解决，请通过支持表单联系。</p>
+      <p class="lead">遇到问题或有任何疑问？先查看常见解答；如果仍未解决，欢迎直接通过官方技术支持邮箱联系我们。</p>
 
       <h2>常见问题解答 (FAQ)</h2>
       
@@ -106,48 +90,39 @@
       </div>
 
       <h2 id="contact">联系与问题反馈</h2>
-      <div class="contact-grid">
-        <div class="contact-box">
-          <h3>📝 提交支持请求</h3>
-          <p>请填写下面的表单，我们会通过您填写的邮箱回复。请不要提交密码、API Key、备份文件或其他敏感内容。</p>
-          <form class="support-form" action="https://formsubmit.co/phraseecho@duck.com" method="POST">
-            <input type="hidden" name="_subject" value="PhraseEcho support request (zh)">
-            <input type="hidden" name="_next" value="https://thirsting0006.github.io/phraseecho-site/zh/thanks.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <p>我们提供直接的邮件技术支持，处理 Bug 排查、数据恢复建议与使用反馈。</p>
 
-            <div class="form-field">
-              <label for="support-name">姓名或称呼（可选）</label>
-              <input id="support-name" type="text" name="name" autocomplete="name">
+      <div class="email-support-card">
+        <div>
+          <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.15rem;">📧 官方支持邮箱</h3>
+          <p style="margin-bottom:0.75rem; font-size:0.95rem;">点击下方按钮可直接唤起您的邮件客户端，或复制经过反爬虫保护的邮箱地址：</p>
+          
+          <div class="email-display-row">
+            <a id="mail-link" class="btn btn-primary" href="#">
+              ✉️ 唤起邮件应用发信
+            </a>
+            <div class="email-address-badge">
+              <span id="mail-text">正在加载支持邮箱...</span>
+              <button id="copy-btn" class="btn btn-secondary" style="padding:0.25rem 0.6rem; font-size:0.8rem;" type="button">
+                复制
+              </button>
             </div>
-
-            <div class="form-field">
-              <label for="support-email">回复邮箱</label>
-              <input id="support-email" type="email" name="email" autocomplete="email" required>
-            </div>
-
-            <div class="form-field">
-              <label for="support-topic">问题类型</label>
-              <select id="support-topic" name="topic">
-                <option value="Bug or crash">Bug 或闪退</option>
-                <option value="Data import or backup">数据导入或备份</option>
-                <option value="Speech recognition or playback">语音识别或播放</option>
-                <option value="Privacy question">隐私问题</option>
-                <option value="Other">其他</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="support-message">问题描述</label>
-              <textarea id="support-message" name="message" required placeholder="请描述发生了什么、如何复现，以及设备和系统版本（如适用）。"></textarea>
-            </div>
-
-            <div>
-              <button type="submit" class="btn btn-secondary">提交支持请求</button>
-            </div>
-          </form>
-          <p class="form-note">表单由 FormSubmit 转发至支持邮箱。首次启用可能需要先在支持邮箱中确认表单地址。</p>
+          </div>
         </div>
+
+        <div class="email-template-box">
+          <h4>💡 建议在来信中包含以下信息以加快排查：</h4>
+          <ul>
+            <li><strong>邮件主题：</strong>[问题类型] 简要描述（例如：<em>[Bug反馈] iOS 18 无法播放发音</em>）</li>
+            <li><strong>设备信息：</strong>设备机型与系统版本（例如：<em>iPhone 15 Pro, iOS 18.1</em>）</li>
+            <li><strong>复现过程：</strong>具体操作步骤与现象描述</li>
+            <li><strong>安全提示：</strong>请勿在邮件中附带密码、API Key 或任何敏感隐私内容。</li>
+          </ul>
+        </div>
+
+        <p class="antispam-hint">
+          🔒 <strong>防垃圾邮件保护：</strong>支持邮箱地址在源码中经过混淆组装，防止爬虫扫描抓取。所有来信由 DuckDuckGo 隐私邮件网关严格过滤垃圾信息。
+        </p>
       </div>
     </div>
   </main>
@@ -162,5 +137,37 @@
       <p class="footer-copy">© 2026 PhraseEcho. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // 动态拼接邮箱，防爬虫抓取
+    (function() {
+      var user = 'phraseecho';
+      var domain = 'duck.com';
+      var addr = user + '@' + domain;
+      var subject = encodeURIComponent('[PhraseEcho 技术支持请求]');
+      var body = encodeURIComponent('您好 PhraseEcho 支持团队：\n\n[请在此处详细描述您遇到的问题或建议]\n\n---\n设备机型：\n系统版本：\nApp版本：');
+      
+      var mailLink = document.getElementById('mail-link');
+      var mailText = document.getElementById('mail-text');
+      var copyBtn = document.getElementById('copy-btn');
+      
+      if (mailLink && mailText) {
+        mailText.textContent = addr;
+        mailLink.href = 'mailto:' + addr + '?subject=' + subject + '&body=' + body;
+      }
+      
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+          navigator.clipboard.writeText(addr).then(function() {
+            var orig = copyBtn.textContent;
+            copyBtn.textContent = '已复制！';
+            setTimeout(function() { copyBtn.textContent = orig; }, 2000);
+          }).catch(function() {
+            prompt('请手动复制支持邮箱：', addr);
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
