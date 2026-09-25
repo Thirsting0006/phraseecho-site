@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .faq-item {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       padding: 1.25rem 1.5rem;
@@ -19,12 +19,23 @@
       color: var(--text-main);
       font-size: 1.1rem;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.5rem;
+      line-height: 1.45;
     }
     .faq-item p {
       margin-bottom: 0;
+      margin-top: 0.5rem;
       font-size: 0.95rem;
+    }
+    @media (max-width: 540px) {
+      .faq-item {
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+      }
+      .faq-item h3 {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
